@@ -1,0 +1,12 @@
+{
+  "generator-jhipster": {
+    "appsFolders": [
+      "catalog",
+      "gateway"
+    ],
+    "directoryPath": "../",
+    "useElk": true,
+    "adminPassword": "admin",
+    "jwtSecretKey": "ec7f69df92e2de9fbf16927a478da4159329c4a7"
+  }
+}

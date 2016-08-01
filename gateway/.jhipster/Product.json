@@ -1,0 +1,24 @@
+{
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "description",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "price",
+            "fieldType": "BigDecimal"
+        }
+    ],
+    "changelogDate": "20160801202118",
+    "dto": "no",
+    "service": "no",
+    "entityTableName": "product",
+    "pagination": "no",
+    "microserviceName": "catalog",
+    "searchEngine": "elasticsearch"
+}
