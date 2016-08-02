@@ -1,0 +1,28 @@
+os:
+  - linux
+language: java
+jdk:
+  - oraclejdk8
+sudo: false
+cache:
+  directories:
+    - node
+    - node_modules
+    - $HOME/.m2
+env:
+  global:
+    - NODE_VERSION=5.0.0
+    - JHIPSTER_TRAVIS=$TRAVIS_BUILD_DIR/travis
+    - JHIPSTER_INSTALL=$JHIPSTER_TRAVIS/install
+    - JHIPSTER_SCRIPTS=$JHIPSTER_TRAVIS/scripts
+install:
+  - $JHIPSTER_INSTALL/01-install-gateway-jhipster-dependencies.sh
+  - $JHIPSTER_INSTALL/02-check-version.sh
+script:
+  - $JHIPSTER_SCRIPTS/01-gateway-tests.sh
+  - $JHIPSTER_SCRIPTS/02-catalog-tests.sh
+notifications:
+  slack: infoowl:GA1xmQBTB5ixZFcWrNuogO8q
+  webhooks:
+    on_success: always  # options: [always|never|change] default: always
+    on_failure: always  # options: [always|never|change] default: always
