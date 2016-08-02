@@ -2,7 +2,7 @@
 
 set -ev
 
-cd ${HOME}/gateway
+cd ${HOME}/microservices/gateway
 
 if [ -f "mvnw" ]; then
   ./mvnw clean

@@ -5,5 +5,5 @@ set -ev
 npm install -g bower
 npm install -g gulp-cli
 
-cd ${HOME}/gateway
+cd ${HOME}/microservices/gateway
 npm install

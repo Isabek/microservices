@@ -2,7 +2,7 @@
 
 set -ev
 
-cd ${HOME}/catalog
+cd ${HOME}/microservices/catalog
 
 if [ -f "mvnw" ]; then
   ./mvnw clean
