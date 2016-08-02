@@ -1,6 +1,8 @@
 os:
   - linux
-language: java
+language: node_js
+node_js:
+  - "5.0.0"
 jdk:
   - oraclejdk8
 sudo: false
