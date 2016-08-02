@@ -2,7 +2,7 @@
 
 set -ev
 
-cd ${HOME}/Isabek/microservices/catalog
+cd catalog
 
 if [ -f "mvnw" ]; then
   ./mvnw clean
