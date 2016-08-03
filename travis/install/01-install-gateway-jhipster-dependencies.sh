@@ -7,3 +7,4 @@ npm install -g gulp-cli
 
 cd gateway
 npm install
+bower install
