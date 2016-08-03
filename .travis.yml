@@ -2,8 +2,6 @@ dist: xenial
 language: java
 jdk:
   - oraclejdk8
-node_js:
-  - "5.0.0"
 sudo: false
 cache:
   directories:
@@ -16,6 +14,8 @@ env:
     - JHIPSTER_TRAVIS=$TRAVIS_BUILD_DIR/travis
     - JHIPSTER_INSTALL=$JHIPSTER_TRAVIS/install
     - JHIPSTER_SCRIPTS=$JHIPSTER_TRAVIS/scripts
+before_install:
+  - rm -rf ~/.nvm && git clone https://github.com/creationix/nvm.git ~/.nvm && (cd ~/.nvm && git checkout `git describe --abbrev=0 --tags`) && source ~/.nvm/nvm.sh && nvm install $NODE_VERSION
 install:
   - $JHIPSTER_INSTALL/01-install-gateway-jhipster-dependencies.sh
   - $JHIPSTER_INSTALL/02-check-version.sh
